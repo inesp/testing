@@ -6,6 +6,6 @@ rules:
       actions:
         - slack_channel_approval:
             channel: "#ines-test"
-            prompt: "If you confirm this, we'll add a tag 'banana'"
+            prompt: "If you confirm this, we'll add a tag 'banana' bla bla"
             on_success:
               - add_deploy_tag: banana
