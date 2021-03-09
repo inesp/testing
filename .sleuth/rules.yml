@@ -1,6 +1,11 @@
 rules:
-  - quick-fixes:
+  - example_rule:
+      description: "Example rule"
       conditions:
         - environment='Production'
       actions:
-        - add_deploy_tag: 'sometag'
+        - slack_channel_approval:
+            channel: "#ines-test"
+            prompt: "If you confirm this, we'll add a tag 'banana'"
+            on_success:
+              - add_deploy_tag: banana
