@@ -27,5 +27,5 @@ jobs:
       - name: Building stack for ${{ matrix.stack }}
         run: echo Hello, world!  ${{ matrix.stack }}
       - name: Fail if ${{ matrix.stack }} == 'failing'
-        if: ${{ matric.stack == 'failing' }}
+        if: ${{ matrix.stack == 'failing' }}
         run: exit 1
