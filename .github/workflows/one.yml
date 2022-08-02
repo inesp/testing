@@ -26,6 +26,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Building stack for ${{ matrix.stack }}
         run: echo Hello, world!  ${{ matrix.stack }}
-      - name: Fail the job named 'failing'
-        if: ${{ matrix.stack }}== 'failing'
+      - name: Fail if ${{ matrix.stack }} == 'failing'
+        if: ${{ matric.stack == 'failing' }}
         run: exit 1
