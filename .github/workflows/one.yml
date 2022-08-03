@@ -40,11 +40,14 @@ jobs:
       matrix:
         version: [10, 12]
         different-option: [one, two]
+    steps:
+      - name: Runniong ${{ matrix.version }} ${{ matrix.different-option }} 
+        run: echo Done ${{ matrix.version }} ${{ matrix.different-option }} 
   forth-job:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         version: [1]
     steps:
-      - name: Nothing really
-        run: echo Done
+      - name: Nothing really ${{ matrix.version }}
+        run: echo Done ${{ matrix.version }}
