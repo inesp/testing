@@ -29,3 +29,8 @@ jobs:
       - name: Never Fail if ${{ matrix.stack }} == 'failing'
         if: ${{ matrix.stack == 'failinggggg' }} 
         run: exit 1
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Nothing really
+        run: echo Done
